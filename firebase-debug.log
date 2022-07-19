@@ -1,0 +1,151 @@
+[debug] [2022-07-19T15:28:09.032Z] ----------------------------------------------------------------------
+[debug] [2022-07-19T15:28:09.034Z] Command:       /usr/local/bin/firebase /home/njeveh/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init
+[debug] [2022-07-19T15:28:09.034Z] CLI Version:   11.3.0
+[debug] [2022-07-19T15:28:09.034Z] Platform:      linux
+[debug] [2022-07-19T15:28:09.034Z] Node Version:  v16.16.0
+[debug] [2022-07-19T15:28:09.035Z] Time:          Tue Jul 19 2022 18:28:09 GMT+0300 (East Africa Time)
+[debug] [2022-07-19T15:28:09.035Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-19T15:28:09.040Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-19T15:28:09.041Z] > authorizing via signed-in user (elinjeveh@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /home/njeveh/laravel_projects/sharedrop
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-07-19T15:30:21.599Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2022-07-19T15:30:23.811Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2022-07-19T15:30:23.811Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project mmshare-e8951 (mmshare) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2022-07-19T15:30:27.314Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/firebasedatabase.googleapis.com [none]
+[debug] [2022-07-19T15:30:29.637Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/firebasedatabase.googleapis.com 200
+[debug] [2022-07-19T15:30:29.637Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/firebasedatabase.googleapis.com [omitted]
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2022-07-19T15:30:29.639Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/mmshare-e8951/locations/-/instances/mmshare-e8951-default-rtdb [none]
+[debug] [2022-07-19T15:30:30.864Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/mmshare-e8951/locations/-/instances/mmshare-e8951-default-rtdb 200
+[debug] [2022-07-19T15:30:30.864Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/mmshare-e8951/locations/-/instances/mmshare-e8951-default-rtdb {"name":"projects/120745980537/locations/us-central1/instances/mmshare-e8951-default-rtdb","project":"projects/120745980537","databaseUrl":"https://mmshare-e8951-default-rtdb.firebaseio.com","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2022-07-19T15:31:06.621Z] >>> [apiv2][query] GET https://mmshare-e8951-default-rtdb.firebaseio.com/.settings/rules.json [none]
+[debug] [2022-07-19T15:31:07.718Z] <<< [apiv2][status] GET https://mmshare-e8951-default-rtdb.firebaseio.com/.settings/rules.json 200
+[debug] [2022-07-19T15:31:07.718Z] <<< [apiv2][body] GET https://mmshare-e8951-default-rtdb.firebaseio.com/.settings/rules.json [stream]
+[info] ✔  Database Rules for mmshare-e8951-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2022-07-19T15:31:07.724Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/firestore.googleapis.com [none]
+[debug] [2022-07-19T15:31:09.571Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/firestore.googleapis.com 200
+[debug] [2022-07-19T15:31:09.571Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/firestore.googleapis.com [omitted]
+[debug] [2022-07-19T15:31:09.572Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/mmshare-e8951 [none]
+[debug] [2022-07-19T15:31:11.307Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/mmshare-e8951 200
+[debug] [2022-07-19T15:31:11.308Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/mmshare-e8951 {"name":"apps/mmshare-e8951","id":"mmshare-e8951","authDomain":"gmail.com","locationId":"us-central","codeBucket":"staging.mmshare-e8951.appspot.com","servingStatus":"SERVING","defaultHostname":"mmshare-e8951.uc.r.appspot.com","defaultBucket":"mmshare-e8951.appspot.com","serviceAccount":"mmshare-e8951@appspot.gserviceaccount.com","gcrDomain":"us.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[debug] [2022-07-19T15:31:11.308Z] database_type: CLOUD_FIRESTORE
+[debug] [2022-07-19T15:31:11.309Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-19T15:31:11.310Z] > authorizing via signed-in user (elinjeveh@gmail.com)
+[debug] [2022-07-19T15:31:11.310Z] [iam] checking project mmshare-e8951 for permissions ["firebase.projects.get"]
+[debug] [2022-07-19T15:31:11.311Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmshare-e8951:testIamPermissions [none]
+[debug] [2022-07-19T15:31:11.311Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmshare-e8951:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-07-19T15:31:13.461Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmshare-e8951:testIamPermissions 200
+[debug] [2022-07-19T15:31:13.461Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmshare-e8951:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-07-19T15:31:41.682Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/mmshare-e8951/releases pageSize=10&pageToken=
+[debug] [2022-07-19T15:31:43.170Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/mmshare-e8951/releases 200
+[debug] [2022-07-19T15:31:43.170Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/mmshare-e8951/releases {"releases":[{"name":"projects/mmshare-e8951/releases/cloud.firestore","rulesetName":"projects/mmshare-e8951/rulesets/95d7927a-ed23-461e-9ffd-033a2aee6511","createTime":"2022-07-19T14:47:53.901747Z","updateTime":"2022-07-19T14:47:53.901747Z"}]}
+[debug] [2022-07-19T15:31:43.171Z] Found ruleset: projects/mmshare-e8951/rulesets/95d7927a-ed23-461e-9ffd-033a2aee6511
+[debug] [2022-07-19T15:31:43.172Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/mmshare-e8951/rulesets/95d7927a-ed23-461e-9ffd-033a2aee6511 [none]
+[debug] [2022-07-19T15:31:44.401Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/mmshare-e8951/rulesets/95d7927a-ed23-461e-9ffd-033a2aee6511 200
+[debug] [2022-07-19T15:31:44.401Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/mmshare-e8951/rulesets/95d7927a-ed23-461e-9ffd-033a2aee6511 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2022-07-19T15:32:05.512Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/mmshare-e8951/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2022-07-19T15:32:05.516Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/mmshare-e8951/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false [none]
+[debug] [2022-07-19T15:32:09.193Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/mmshare-e8951/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false 200
+[debug] [2022-07-19T15:32:09.193Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/mmshare-e8951/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false {"fields":[{"name":"projects/mmshare-e8951/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2022-07-19T15:32:09.194Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/mmshare-e8951/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2022-07-19T15:32:09.194Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/mmshare-e8951/databases/(default)/collectionGroups/-/indexes {}
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with sample code
+[info] pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2022-07-19T15:32:09.197Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-19T15:32:09.197Z] > authorizing via signed-in user (elinjeveh@gmail.com)
+[debug] [2022-07-19T15:32:09.197Z] [iam] checking project mmshare-e8951 for permissions ["firebase.projects.get"]
+[debug] [2022-07-19T15:32:09.198Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmshare-e8951:testIamPermissions [none]
+[debug] [2022-07-19T15:32:09.198Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmshare-e8951:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-07-19T15:32:11.236Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmshare-e8951:testIamPermissions 200
+[debug] [2022-07-19T15:32:11.237Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mmshare-e8951:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-07-19T15:32:11.238Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-07-19T15:32:11.242Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-07-19T15:32:13.289Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/runtimeconfig.googleapis.com 200
+[debug] [2022-07-19T15:32:13.290Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-07-19T15:32:13.292Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/cloudfunctions.googleapis.com 200
+[debug] [2022-07-19T15:32:13.292Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2022-07-19T15:32:13.292Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2022-07-19T15:32:15.949Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2022-07-19T15:32:15.949Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2022-07-19T15:32:25.962Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-07-19T15:32:28.038Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/cloudfunctions.googleapis.com 200
+[debug] [2022-07-19T15:32:28.038Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mmshare-e8951/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  Wrote functions/package.json 
+[info] ✔  Wrote functions/.eslintrc.js 
+[info] ✔  Wrote functions/index.js 
+[info] ✔  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2022-07-19T15:40:24.465Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2022-07-19T15:40:25.014Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2022-07-19T15:40:25.014Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.9.0","browserURL":"https://www.gstatic.com/firebasejs/9.9.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.9.0/firebase.tgz"},"live":{"version":"9.9","browserURL":"https://www.gstatic.com/firebasejs/live/9.9/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.9/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.9.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.9.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.9.0/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.9.0/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.9.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/9.9.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/9.9.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.9.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.9.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.9.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.9.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.9.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.memory.js"}}
+[info] ✔  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at /home/njeveh/laravel_projects/sharedrop 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=520966120&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-07-19T15:41:27.125Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-07-19T15:41:27.126Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-07-19T15:41:28.221Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-07-19T15:41:28.221Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-07-19T15:41:28.247Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-07-19T15:41:29.145Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-07-19T15:41:29.147Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"njeveh","id":84507592,"node_id":"MDQ6VXNlcjg0NTA3NTky","avatar_url":"https://avatars.githubusercontent.com/u/84507592?v=4","gravatar_id":"","url":"https://api.github.com/users/njeveh","html_url":"https://github.com/njeveh","followers_url":"https://api.github.com/users/njeveh/followers","following_url":"https://api.github.com/users/njeveh/following{/other_user}","gists_url":"https://api.github.com/users/njeveh/gists{/gist_id}","starred_url":"https://api.github.com/users/njeveh/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/njeveh/subscriptions","organizations_url":"https://api.github.com/users/njeveh/orgs","repos_url":"https://api.github.com/users/njeveh/repos","events_url":"https://api.github.com/users/njeveh/events{/privacy}","received_events_url":"https://api.github.com/users/njeveh/received_events","type":"User","site_admin":false,"name":"ELIJAH MUTEMI","company":null,"blog":"https://elijah-career-portfolio.netlify.app/","location":"Nairobi, Kenya","email":null,"hireable":true,"bio":null,"twitter_username":"njeveh","public_repos":16,"public_gists":0,"followers":3,"following":7,"created_at":"2021-05-20T11:05:47Z","updated_at":"2022-05-23T16:44:37Z","private_gists":0,"total_private_repos":1,"owned_private_repos":1,"disk_usage":11899,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as njeveh 
+[info] 
